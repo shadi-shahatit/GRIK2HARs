@@ -1,0 +1,3325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo -oc fimo_out_6exFRMPD2macaquepromoter JASPAR2024_synaptogenesis_genes_macaque_meme.txt 6exFRMPD2macaquepromoter.txt</command-line>
+<pattern-file>JASPAR2024_synaptogenesis_genes_macaque_meme.txt</pattern-file>
+<sequence-file>6exFRMPD2macaquepromoter.txt</sequence-file>
+<site-pvalue-cutoff>0.0001</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="MA0004.1" name="Arnt">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0069.1" name="PAX6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0071.1" name="RORA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="887" stop="878" score="13.7449" pvalue="1.56e-05">
+<sequence>AAAAAGGTCA</sequence>
+<mem:qvalue>0.0315</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0107.1" name="RELA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="193" stop="202" score="14.2551" pvalue="1.24e-05">
+<sequence>GGGGATTCCC</sequence>
+<mem:qvalue>0.0244</mem:qvalue>
+</matched-element>
+<matched-element start="192" stop="201" score="10.7959" pvalue="5.51e-05">
+<sequence>TGGGGATTCC</sequence>
+<mem:qvalue>0.0541</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0115.1" name="NR1H2::RXRA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0116.1" name="Znf423">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0119.1" name="NFIC::TLX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0130.1" name="ZNF354C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0142.1" name="Pou5f1::Sox2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0149.1" name="EWSR1-FLI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="428" stop="445" score="-14.8553" pvalue="7.23e-05">
+<sequence>GGAGGGCAGCCTGGAGGC</sequence>
+<mem:qvalue>0.135</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0151.1" name="Arid3a">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0155.1" name="INSM1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0159.1" name="RARA::RXRA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="751" stop="735" score="9.08163" pvalue="9.29e-05">
+<sequence>AGAGCAGTGGGAGGTGA</sequence>
+<mem:qvalue>0.179</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0145.2" name="Tfcp2l1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0595.1" name="SREBF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0596.1" name="SREBF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0599.1" name="KLF5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0604.1" name="Atf1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0608.1" name="Creb3l2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0613.1" name="FOXG1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0614.1" name="Foxj2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0636.1" name="BHLHE41">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0153.2" name="HNF1B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0486.2" name="HSF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0655.1" name="JDP2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0663.1" name="MLX">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0676.1" name="Nr2e1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0678.1" name="OLIG2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0083.3" name="SRF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0691.1" name="TFAP4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0696.1" name="ZIC1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="736" stop="749" score="8.61702" pvalue="3.13e-05">
+<sequence>CACCTCCCACTGCT</sequence>
+<mem:qvalue>0.06</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0729.1" name="RARA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0730.1" name="RARA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0731.1" name="BCL6B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0472.2" name="EGR2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0741.1" name="KLF16">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0088.2" name="ZNF143">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0770.1" name="HSF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0773.1" name="MEF2D">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0774.1" name="MEIS2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="543" stop="550" score="13.5345" pvalue="2.94e-05">
+<sequence>TTGACAGG</sequence>
+<mem:qvalue>0.0584</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0105.4" name="NFKB1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="192" stop="204" score="10.0192" pvalue="7.54e-06">
+<sequence>TGGGGATTCCCTT</sequence>
+<mem:qvalue>0.00817</mem:qvalue>
+</matched-element>
+<matched-element start="204" stop="192" score="9.69231" pvalue="8.49e-06">
+<sequence>AAGGGAATCCCCA</sequence>
+<mem:qvalue>0.00817</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0783.1" name="PKNOX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0787.1" name="POU3F2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="470" stop="481" score="13.9677" pvalue="9.21e-06">
+<sequence>CTATGCAAATGA</sequence>
+<mem:qvalue>0.0186</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0788.1" name="POU3F3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="469" stop="481" score="12.81" pvalue="1.91e-05">
+<sequence>ACTATGCAAATGA</sequence>
+<mem:qvalue>0.0386</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0794.1" name="PROX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0795.1" name="SMAD3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0801.1" name="MGA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0813.1" name="TFAP2B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0815.1" name="TFAP2C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0823.1" name="HEY1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="3" stop="12" score="11.6182" pvalue="6.06e-05">
+<sequence>cgcaCGCGTC</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0826.1" name="OLIG1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0827.1" name="OLIG3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0838.1" name="CEBPG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0032.2" name="FOXC1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0848.1" name="FOXO4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0849.1" name="FOXO6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0850.1" name="FOXP3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0856.1" name="RXRG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0857.1" name="Rarb">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0858.1" name="Rarb">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="730" stop="714" score="-2.18182" pvalue="6.47e-05">
+<sequence>AGGCGACAGAAGGCTCA</sequence>
+<mem:qvalue>0.129</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0106.3" name="TP53">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0862.1" name="GMEB2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0863.1" name="MTF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="1" stop="14" score="6.63415" pvalue="6.11e-05">
+<sequence>gccgcaCGCGTCAC</sequence>
+<mem:qvalue>0.117</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0024.3" name="E2F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0866.1" name="SOX21">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0870.1" name="Sox1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0872.1" name="TFAP2A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1124.1" name="ZNF24">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1127.1" name="FOSB::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="161" stop="171" score="11.9231" pvalue="3.36e-05">
+<sequence>GGTGAGGTCAT</sequence>
+<mem:qvalue>0.0681</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1129.1" name="FOSL1::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="10.6036" pvalue="8.83e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0995</mem:qvalue>
+</matched-element>
+<matched-element start="171" stop="162" score="10.503" pvalue="9.82e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0995</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1136.1" name="FOSB::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="11.0769" pvalue="6.53e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0882</mem:qvalue>
+</matched-element>
+<matched-element start="171" stop="162" score="10.6224" pvalue="8.71e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0882</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1420.1" name="IRF5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1485.1" name="FERD3L">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1489.1" name="FOXN3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1493.1" name="HES6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1538.1" name="NR2F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1556.1" name="RXRG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1557.1" name="SMAD5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1570.1" name="TFAP4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1587.1" name="ZNF135">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="221" stop="208" score="12.7449" pvalue="9.08e-06">
+<sequence>CCCCAACCTCCCCG</sequence>
+<mem:qvalue>0.0177</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1588.1" name="ZNF136">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1594.1" name="ZNF382">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1597.1" name="ZNF528">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="423" stop="439" score="7.09184" pvalue="4.4e-05">
+<sequence>CACAGGGAGGGCAGCCT</sequence>
+<mem:qvalue>0.083</mem:qvalue>
+</matched-element>
+<matched-element start="699" stop="715" score="5.32653" pvalue="8.46e-05">
+<sequence>TCCGGGGAGGACACCTG</sequence>
+<mem:qvalue>0.083</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1715.1" name="ZNF707">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="450" stop="464" score="6.21212" pvalue="9.58e-05">
+<sequence>CCCTTCTCCTGTTCT</sequence>
+<mem:qvalue>0.186</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1718.1" name="ZNF8">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1962.1" name="POU2F1::SOX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1972.1" name="ZFP14">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="751" stop="765" score="10.4831" pvalue="5.23e-05">
+<sequence>TGAGGGAAGGGAGTG</sequence>
+<mem:qvalue>0.0775</mem:qvalue>
+</matched-element>
+<matched-element start="211" stop="225" score="9.47191" pvalue="8.1e-05">
+<sequence>GGAGGTTGGGGAGGC</sequence>
+<mem:qvalue>0.0775</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1980.1" name="ZNF418">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0079.5" name="SP1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0509.3" name="RFX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0516.3" name="SP2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="426" stop="434" score="9.79775" pvalue="8.69e-05">
+<sequence>AGGGAGGGC</sequence>
+<mem:qvalue>0.166</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0685.2" name="SP4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="744" stop="736" score="9.83146" pvalue="5.56e-05">
+<sequence>TGGGAGGTG</sequence>
+<mem:qvalue>0.106</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0742.2" name="KLF12">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0798.3" name="RFX3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0818.2" name="BHLHE22">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0831.3" name="TFE3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1511.2" name="KLF10">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1532.2" name="NR1D2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1563.2" name="SOX18">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="328" stop="321" score="11.3433" pvalue="5.75e-05">
+<sequence>AACAATGG</sequence>
+<mem:qvalue>0.116</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1573.2" name="Thap11">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1601.2" name="ZNF75D">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1633.2" name="BACH1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0259.2" name="ARNT::HIF1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0019.2" name="Ddit3::Cebpa">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0040.2" name="Foxq1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2096.1" name="ZNF524">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2097.1" name="ZNF75A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="499" stop="510" score="14.569" pvalue="5.89e-06">
+<sequence>GCTTTTCTCACC</sequence>
+<mem:qvalue>0.0115</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2098.1" name="ZNF766">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2099.1" name="ZNF770">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2100.1" name="ZSCAN16">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2102.1" name="ZBTB17">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2117.1" name="FOXP4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2118.1" name="FOXS1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2120.1" name="ZNF184">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2121.1" name="ZNF213">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="443" stop="432" score="10.5041" pvalue="7.74e-05">
+<sequence>CTCCAGGCTGCC</sequence>
+<mem:qvalue>0.14</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2324.1" name="BCL11A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2325.1" name="EPAS1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2326.1" name="IKZF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2329.1" name="ZBTB11">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="695" stop="703" score="12.1651" pvalue="4.23e-05">
+<sequence>CACATCCGG</sequence>
+<mem:qvalue>0.0831</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2330.1" name="ZBTB24">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2331.1" name="ZNF157">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2332.1" name="ZNF175">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="232" stop="224" score="10.9858" pvalue="6.02e-05">
+<sequence>CCAGGAAGC</sequence>
+<mem:qvalue>0.119</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2333.1" name="ZNF35">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="847" stop="841" score="11.8897" pvalue="9.66e-05">
+<sequence>AATTCTA</sequence>
+<mem:qvalue>0.196</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2334.1" name="ZNF547">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="287" stop="275" score="12.4715" pvalue="1.47e-05">
+<sequence>TGTTAATGCCACC</sequence>
+<mem:qvalue>0.0296</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2335.1" name="ZNF558">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2336.1" name="ZSCAN21">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="33" stop="27" score="12.6099" pvalue="6.51e-05">
+<sequence>AAGCACT</sequence>
+<mem:qvalue>0.132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2341.1" name="FEZF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="41" stop="34" score="10.7714" pvalue="9.02e-05">
+<sequence>CCCAGCCC</sequence>
+<mem:qvalue>0.175</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1464.2" name="ARNT2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1100.3" name="ASCL1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="345" stop="338" score="11.7636" pvalue="6.37e-05">
+<sequence>GCAGCTGG</sequence>
+<mem:qvalue>0.0731</mem:qvalue>
+</matched-element>
+<matched-element start="338" stop="345" score="11.1091" pvalue="7.36e-05">
+<sequence>CCAGCTGC</sequence>
+<mem:qvalue>0.0731</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1631.2" name="ASCL1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="194" stop="186" score="14.7398" pvalue="7.18e-06">
+<sequence>CCACCTGCC</sequence>
+<mem:qvalue>0.0139</mem:qvalue>
+</matched-element>
+<matched-element start="11" stop="19" score="13.439" pvalue="2.03e-05">
+<sequence>TCACCTGCC</sequence>
+<mem:qvalue>0.0196</mem:qvalue>
+</matched-element>
+<matched-element start="338" stop="346" score="11.5122" pvalue="5.27e-05">
+<sequence>CCAGCTGCC</sequence>
+<mem:qvalue>0.0339</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1632.2" name="ATF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="14.2846" pvalue="8.3e-06">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0168</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0605.3" name="ATF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0833.3" name="ATF4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1466.2" name="ATF6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0834.2" name="ATF7">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="7.37143" pvalue="7.62e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.154</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0496.4" name="MAFK">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1101.3" name="BACH2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1470.2" name="BACH2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0875.2" name="BARX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1471.2" name="BARX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1634.2" name="BATF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0462.3" name="BATF::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0488.2" name="JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="13.9592" pvalue="1.44e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0288</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0835.3" name="BATF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0463.3" name="BCL6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1635.2" name="BHLHE22">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0464.3" name="BHLHE40">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0102.5" name="CEBPA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0466.4" name="CEBPB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0836.3" name="CEBPD">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0837.3" name="CEBPE">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1636.2" name="CEBPG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0819.3" name="CLOCK">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0018.5" name="CREB1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="163" stop="170" score="11.5461" pvalue="4.72e-05">
+<sequence>TGAGGTCA</sequence>
+<mem:qvalue>0.0945</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0638.2" name="CREB3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0839.2" name="CREB3L1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1474.2" name="CREB3L4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1475.2" name="CREB3L4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0609.3" name="CREM">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="171" stop="162" score="11.4611" pvalue="4.12e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0431</mem:qvalue>
+</matched-element>
+<matched-element start="162" stop="171" score="11.4551" pvalue="4.3e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0431</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0139.2" name="CTCF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="307" stop="293" score="14.0164" pvalue="6.2e-06">
+<sequence>GCCACCATAGGGCAC</sequence>
+<mem:qvalue>0.0121</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1929.2" name="CTCF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="324" stop="294" score="13.4146" pvalue="6.34e-06">
+<sequence>ATGGATTTCACGTAGATGCCACCATAGGGCA</sequence>
+<mem:qvalue>0.0117</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1930.2" name="CTCF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="277" stop="309" score="7.65138" pvalue="5.8e-05">
+<sequence>TGGCATTAACACCAGCGTGCCCTATGGTGGCAT</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1102.3" name="CTCFL">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0754.3" name="CUX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0755.2" name="CUX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0639.2" name="DBP">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0879.3" name="DLX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0469.4" name="E2F3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0470.3" name="E2F4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1637.2" name="EBF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0162.5" name="EGR1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0732.2" name="EGR3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0733.2" name="EGR4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0473.4" name="ELF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1483.3" name="ELF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="233" stop="224" score="10.7286" pvalue="8.55e-05">
+<sequence>TCCAGGAAGC</sequence>
+<mem:qvalue>0.171</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0640.3" name="ELF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0686.2" name="SPDEF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="705" stop="696" score="12.6" pvalue="2.23e-05">
+<sequence>CCCCGGATGT</sequence>
+<mem:qvalue>0.0444</mem:qvalue>
+</matched-element>
+<matched-element start="918" stop="909" score="10.9273" pvalue="5.3e-05">
+<sequence>TCCAGGATGT</sequence>
+<mem:qvalue>0.0527</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1933.2" name="ELK1::SREBF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="510" stop="524" score="9.58065" pvalue="4.01e-05">
+<sequence>CTGGAAAGGGGGTGA</sequence>
+<mem:qvalue>0.0764</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0828.3" name="SREBF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0843.2" name="TEF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0759.3" name="ELK3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0076.3" name="ELK4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="223" stop="231" score="10.8" pvalue="9.3e-05">
+<sequence>GGCTTCCTG</sequence>
+<mem:qvalue>0.183</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0612.3" name="EMX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0886.2" name="EMX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0760.2" name="ERF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1934.2" name="ERF::FIGLA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0820.2" name="FIGLA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1935.2" name="ERF::FOXI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1936.2" name="ERF::FOXO1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="980" score="13.4714" pvalue="1.32e-05">
+<sequence>GAAAACAGGAGG</sequence>
+<mem:qvalue>0.0261</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1937.2" name="ERF::HOXB13">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0058.4" name="MAX">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1938.2" name="ERF::NHLH1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1939.2" name="ERF::SREBF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0592.4" name="ESRRA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0141.4" name="ESRRB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="639" stop="630" score="7.74138" pvalue="8.99e-05">
+<sequence>TGAAGGCCAA</sequence>
+<mem:qvalue>0.182</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0098.4" name="ETS1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1484.2" name="ETS2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0761.3" name="ETV1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="232" stop="224" score="11.187" pvalue="5.87e-05">
+<sequence>CCAGGAAGC</sequence>
+<mem:qvalue>0.117</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1941.2" name="ETV2::FIGLA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0763.2" name="ETV3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="704" stop="696" score="11.5493" pvalue="5.7e-05">
+<sequence>CCCGGATGT</sequence>
+<mem:qvalue>0.116</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0764.4" name="ETV4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="704" stop="696" score="10.898" pvalue="8.88e-05">
+<sequence>CCCGGATGT</sequence>
+<mem:qvalue>0.175</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0765.4" name="ETV5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="704" stop="696" score="9.83673" pvalue="8.84e-05">
+<sequence>CCCGGATGT</sequence>
+<mem:qvalue>0.173</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1944.2" name="ETV5::DRGX">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1945.2" name="ETV5::FIGLA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1946.2" name="ETV5::FOXI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="980" score="13.5606" pvalue="1.15e-05">
+<sequence>GAAAACAGGAGG</sequence>
+<mem:qvalue>0.0223</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1947.2" name="ETV5::FOXO1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="978" score="14.8429" pvalue="4.03e-06">
+<sequence>GAAAACAGGA</sequence>
+<mem:qvalue>0.00808</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1948.2" name="ETV5::HOXA2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0645.2" name="ETV6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0476.2" name="FOS">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1951.2" name="FOS">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="161" stop="173" score="8.17241" pvalue="9.01e-05">
+<sequence>GGTGAGGTCATGG</sequence>
+<mem:qvalue>0.182</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0099.4" name="FOS::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1126.2" name="FOS::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="171" stop="162" score="11.8876" pvalue="2.87e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0581</mem:qvalue>
+</matched-element>
+<matched-element start="162" stop="171" score="11.142" pvalue="5.93e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.06</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1134.2" name="FOS::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1140.3" name="JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="171" stop="161" score="11.4571" pvalue="2.08e-05">
+<sequence>ATGACCTCACC</sequence>
+<mem:qvalue>0.0418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0490.3" name="JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1141.2" name="FOS::JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0492.2" name="JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="161" stop="171" score="15.7234" pvalue="3.11e-06">
+<sequence>GGTGAGGTCAT</sequence>
+<mem:qvalue>0.00624</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0491.3" name="JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1135.2" name="FOSB::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0477.3" name="FOSL1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1128.2" name="FOSL1::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1137.2" name="FOSL1::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1142.2" name="FOSL1::JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1143.2" name="FOSL1::JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0478.2" name="FOSL2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1130.2" name="FOSL2::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1131.2" name="FOSL2::JUN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="171" stop="162" score="11.5" pvalue="4.8e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0757</mem:qvalue>
+</matched-element>
+<matched-element start="162" stop="171" score="10.8065" pvalue="7.48e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0757</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1138.2" name="FOSL2::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1139.2" name="FOSL2::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="10.592" pvalue="7.02e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0766</mem:qvalue>
+</matched-element>
+<matched-element start="171" stop="162" score="10.488" pvalue="7.56e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0766</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1144.2" name="FOSL2::JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1145.2" name="FOSL2::JUND">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="162" stop="171" score="11.6613" pvalue="4.06e-05">
+<sequence>GTGAGGTCAT</sequence>
+<mem:qvalue>0.0793</mem:qvalue>
+</matched-element>
+<matched-element start="171" stop="162" score="10.5645" pvalue="7.83e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.0793</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0030.2" name="FOXF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1952.2" name="FOXJ2::ELF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0852.3" name="FOXK1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1103.3" name="FOXK2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1953.2" name="FOXO1::ELF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="981" score="12.1831" pvalue="2.85e-05">
+<sequence>GAAAACAGGAGGA</sequence>
+<mem:qvalue>0.0574</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1954.2" name="FOXO1::ELK1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="981" score="11.2959" pvalue="3.81e-05">
+<sequence>GAAAACAGGAGGA</sequence>
+<mem:qvalue>0.0763</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1955.2" name="FOXO1::ELK3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="969" stop="981" score="10.2368" pvalue="6.47e-05">
+<sequence>GAAAACAGGAGGA</sequence>
+<mem:qvalue>0.0805</mem:qvalue>
+</matched-element>
+<matched-element start="76" stop="64" score="9.78947" pvalue="7.98e-05">
+<sequence>AACAACAGAAACT</sequence>
+<mem:qvalue>0.0805</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1956.2" name="FOXO1::FLI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="76" stop="64" score="9.1" pvalue="4.54e-05">
+<sequence>AACAACAGAAACT</sequence>
+<mem:qvalue>0.0724</mem:qvalue>
+</matched-element>
+<matched-element start="266" stop="254" score="7.82857" pvalue="7.22e-05">
+<sequence>CACAACAGAAAAC</sequence>
+<mem:qvalue>0.0724</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0481.4" name="FOXP1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0593.2" name="FOXP2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0143.5" name="SOX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="327" stop="321" score="12.5887" pvalue="6.51e-05">
+<sequence>ACAATGG</sequence>
+<mem:qvalue>0.132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0522.4" name="TCF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="12" stop="18" score="13.5106" pvalue="4.39e-05">
+<sequence>CACCTGC</sequence>
+<mem:qvalue>0.0428</mem:qvalue>
+</matched-element>
+<matched-element start="193" stop="187" score="13.5106" pvalue="4.39e-05">
+<sequence>CACCTGC</sequence>
+<mem:qvalue>0.0428</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1099.3" name="HES1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="12" stop="5" score="11.9149" pvalue="5.65e-05">
+<sequence>GACGCGTG</sequence>
+<mem:qvalue>0.115</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0649.2" name="HEY2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="12" stop="4" score="11.8103" pvalue="3.28e-05">
+<sequence>GACGCGTGC</sequence>
+<mem:qvalue>0.0642</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0738.2" name="HIC2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1106.2" name="HIF1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0131.3" name="HINFP">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0043.4" name="HLF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0895.2" name="HMBOX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0046.3" name="HNF1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1508.2" name="IKZF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="964" stop="971" score="11.813" pvalue="3.26e-05">
+<sequence>CACAGGAA</sequence>
+<mem:qvalue>0.0632</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0051.2" name="IRF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1418.2" name="IRF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0656.2" name="JDP2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="171" stop="162" score="6.3617" pvalue="9.04e-05">
+<sequence>ATGACCTCAC</sequence>
+<mem:qvalue>0.183</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1132.2" name="JUN::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1133.2" name="JUN::JUNB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="161" stop="171" score="13.0119" pvalue="1.39e-05">
+<sequence>GGTGAGGTCAT</sequence>
+<mem:qvalue>0.0281</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1512.2" name="KLF11">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1513.2" name="KLF15">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1516.2" name="KLF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0039.5" name="KLF4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="196" stop="189" score="10.8818" pvalue="7.24e-05">
+<sequence>CCCCACCT</sequence>
+<mem:qvalue>0.139</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1517.2" name="KLF6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1959.2" name="KLF7">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1107.3" name="KLF9">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0700.3" name="LHX2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0658.2" name="LHX6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0702.3" name="LMX1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0703.3" name="LMX1B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1520.2" name="MAF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0501.2" name="MAF::NFE2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1521.2" name="MAFA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0495.4" name="MAFF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0089.3" name="MAFG::NFE2L1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0059.2" name="MAX::MYC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0147.4" name="MYC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1522.2" name="MAZ">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0052.5" name="MEF2A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0497.2" name="MEF2C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1640.2" name="MEIS2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0775.2" name="MEIS3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="543" stop="549" score="11.5385" pvalue="6.51e-05">
+<sequence>TTGACAG</sequence>
+<mem:qvalue>0.129</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1960.2" name="MGA::EVX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="290" stop="280" score="15.8727" pvalue="2.76e-06">
+<sequence>TGGTGTTAATG</sequence>
+<mem:qvalue>0.00558</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0620.4" name="MITF">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0664.2" name="MLXIPL">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0825.2" name="MNT">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1523.2" name="MSANTD3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1108.3" name="MXI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0104.5" name="MYCN">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0499.3" name="MYOD1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="136" stop="128" score="11.1138" pvalue="6.4e-05">
+<sequence>TCACCTGTT</sequence>
+<mem:qvalue>0.0771</mem:qvalue>
+</matched-element>
+<matched-element start="194" stop="186" score="10.8293" pvalue="7.95e-05">
+<sequence>CCACCTGCC</sequence>
+<mem:qvalue>0.0771</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0056.3" name="MZF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="199" stop="192" score="14.6016" pvalue="1.47e-05">
+<sequence>AATCCCCA</sequence>
+<mem:qvalue>0.0289</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1109.2" name="NEUROD1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="239" stop="246" score="14.578" pvalue="1.47e-05">
+<sequence>ACAGATGG</sequence>
+<mem:qvalue>0.029</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0625.3" name="NFATC3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0670.2" name="NFIA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1643.2" name="NFIB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0161.3" name="NFIC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="349" stop="343" score="13.374" pvalue="5.35e-05">
+<sequence>CTTGGCA</sequence>
+<mem:qvalue>0.107</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1527.2" name="NFIC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0671.2" name="NFIX">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1528.2" name="NFIX">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0778.2" name="NFKB2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="203" stop="193" score="12.4848" pvalue="1.49e-05">
+<sequence>AGGGAATCCCC</sequence>
+<mem:qvalue>0.0277</mem:qvalue>
+</matched-element>
+<matched-element start="193" stop="203" score="10.8939" pvalue="2.86e-05">
+<sequence>GGGGATTCCCT</sequence>
+<mem:qvalue>0.0277</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0060.4" name="NFYA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="390" stop="383" score="10.8165" pvalue="9.18e-05">
+<sequence>CCAATGAG</sequence>
+<mem:qvalue>0.186</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0502.3" name="NFYB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="627" stop="635" score="10.8293" pvalue="7e-05">
+<sequence>TCTTTGGCC</sequence>
+<mem:qvalue>0.138</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1644.2" name="NFYC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0675.2" name="NKX6-2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1531.2" name="NR1D1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1535.2" name="NR2C1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0504.2" name="NR2C2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1536.2" name="NR2C2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0017.3" name="NR2F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="163" stop="174" score="14" pvalue="1.31e-05">
+<sequence>TGAGGTCATGGG</sequence>
+<mem:qvalue>0.0261</mem:qvalue>
+</matched-element>
+<matched-element start="885" stop="874" score="12.7885" pvalue="3.18e-05">
+<sequence>AAAGGTCAGGGA</sequence>
+<mem:qvalue>0.0316</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1537.2" name="NR2F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1111.2" name="NR2F2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="884" stop="878" score="13.1382" pvalue="6.51e-05">
+<sequence>AAGGTCA</sequence>
+<mem:qvalue>0.131</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0113.4" name="NR3C1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0727.2" name="NR3C2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="404" stop="390" score="4.6383" pvalue="7.88e-05">
+<sequence>GGAGCACAGAGTTCC</sequence>
+<mem:qvalue>0.156</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1112.3" name="NR4A1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="885" stop="878" score="14.6636" pvalue="1.79e-05">
+<sequence>AAAGGTCA</sequence>
+<mem:qvalue>0.0361</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0160.3" name="NR4A2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="885" stop="878" score="14.2" pvalue="1.79e-05">
+<sequence>AAAGGTCA</sequence>
+<mem:qvalue>0.0362</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1147.2" name="NR4A2::RXRA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0711.2" name="OTX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1545.2" name="OVOL2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1961.2" name="PATZ1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="187" stop="197" score="10.236" pvalue="5.28e-05">
+<sequence>GCAGGTGGGGA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0070.2" name="PBX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1114.2" name="PBX3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0782.3" name="PKNOX1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1548.2" name="PLAGL2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0785.2" name="POU2F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="471" stop="479" score="14.94" pvalue="5.98e-06">
+<sequence>TATGCAAAT</sequence>
+<mem:qvalue>0.0121</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0507.3" name="POU2F2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="470" stop="482" score="14.3462" pvalue="6.62e-06">
+<sequence>CTATGCAAATGAT</sequence>
+<mem:qvalue>0.0134</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0627.3" name="POU2F3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="471" stop="479" score="15.8687" pvalue="5.98e-06">
+<sequence>TATGCAAAT</sequence>
+<mem:qvalue>0.0121</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0791.2" name="POU4F3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0628.2" name="POU6F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1549.2" name="POU6F1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1550.2" name="PPARD">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0066.2" name="PPARG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1149.2" name="RARA::RXRG">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1552.2" name="RARB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1116.2" name="RBPJ">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1117.2" name="RELB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0799.3" name="RFX4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0510.3" name="RFX5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1554.2" name="RFX7">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0072.2" name="RORA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1150.2" name="RORB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1963.2" name="SATB1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0743.3" name="SCRT1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="126" stop="135" score="10.3486" pvalue="7.73e-05">
+<sequence>CGAACAGGTG</sequence>
+<mem:qvalue>0.155</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0744.3" name="SCRT2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1964.2" name="SMAD2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0442.3" name="SOX10">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1561.2" name="SOX12">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1120.2" name="SOX13">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="327" stop="321" score="12.5565" pvalue="6.51e-05">
+<sequence>ACAATGG</sequence>
+<mem:qvalue>0.132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1562.2" name="SOX14">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="330" stop="322" score="12.3485" pvalue="3.66e-05">
+<sequence>GGAACAATG</sequence>
+<mem:qvalue>0.0743</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1152.2" name="SOX15">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0867.3" name="SOX4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="328" stop="321" score="12.1346" pvalue="5.75e-05">
+<sequence>AACAATGG</sequence>
+<mem:qvalue>0.117</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0868.3" name="SOX8">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="328" stop="322" score="11.7414" pvalue="7.93e-05">
+<sequence>AACAATG</sequence>
+<mem:qvalue>0.161</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0077.2" name="SOX9">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="321" stop="328" score="12.939" pvalue="1.79e-05">
+<sequence>CCATTGTT</sequence>
+<mem:qvalue>0.0363</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0746.3" name="SP3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1564.2" name="SP9">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0829.3" name="SREBF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0137.4" name="STAT1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0517.2" name="STAT1::STAT2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0144.3" name="STAT3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0091.2" name="TAL1::TCF3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0802.2" name="TBR1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="511" stop="503" score="12.1489" pvalue="4.81e-05">
+<sequence>AGGTGAGAA</sequence>
+<mem:qvalue>0.0949</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1648.2" name="TCF12">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="12" stop="18" score="13.3191" pvalue="4.39e-05">
+<sequence>CACCTGC</sequence>
+<mem:qvalue>0.043</mem:qvalue>
+</matched-element>
+<matched-element start="193" stop="187" score="13.3191" pvalue="4.39e-05">
+<sequence>CACCTGC</sequence>
+<mem:qvalue>0.043</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0830.3" name="TCF4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="194" stop="187" score="12.9024" pvalue="2.97e-05">
+<sequence>CCACCTGC</sequence>
+<mem:qvalue>0.0576</mem:qvalue>
+</matched-element>
+<matched-element start="11" stop="18" score="11.0732" pvalue="6.59e-05">
+<sequence>TCACCTGC</sequence>
+<mem:qvalue>0.0638</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0523.2" name="TCF7L2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0632.3" name="TCFL5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0090.4" name="TEAD1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1121.2" name="TEAD2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0810.2" name="TFAP2A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="435" stop="445" score="11.2364" pvalue="7.03e-05">
+<sequence>AGCCTGGAGGC</sequence>
+<mem:qvalue>0.0722</mem:qvalue>
+</matched-element>
+<matched-element start="446" stop="436" score="11" pvalue="8.14e-05">
+<sequence>GGCCTCCAGGC</sequence>
+<mem:qvalue>0.0722</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0003.5" name="TFAP2A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0811.2" name="TFAP2B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="445" stop="435" score="12.2727" pvalue="3.38e-05">
+<sequence>GCCTCCAGGCT</sequence>
+<mem:qvalue>0.0616</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0812.2" name="TFAP2B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0524.3" name="TFAP2C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="445" stop="435" score="12.1531" pvalue="3.48e-05">
+<sequence>GCCTCCAGGCT</sequence>
+<mem:qvalue>0.0627</mem:qvalue>
+</matched-element>
+<matched-element start="436" stop="446" score="10.7347" pvalue="9.39e-05">
+<sequence>GCCTGGAGGCC</sequence>
+<mem:qvalue>0.0847</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0814.3" name="TFAP2C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1569.2" name="TFAP2E">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1966.2" name="TFAP4::ETV1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1967.2" name="TFAP4::FLI1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1968.2" name="TFCP2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="963" stop="955" score="12.9091" pvalue="1.96e-05">
+<sequence>AAACCAGTT</sequence>
+<mem:qvalue>0.0282</mem:qvalue>
+</matched-element>
+<matched-element start="954" stop="962" score="12.7879" pvalue="2.85e-05">
+<sequence>AAACTGGTT</sequence>
+<mem:qvalue>0.0282</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1122.2" name="TFDP1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0692.2" name="TFEB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0871.3" name="TFEC">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0597.3" name="THAP1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="539" stop="532" score="14.798" pvalue="9.9e-06">
+<sequence>GCAGGGCA</sequence>
+<mem:qvalue>0.0192</mem:qvalue>
+</matched-element>
+<matched-element start="428" stop="435" score="12.9495" pvalue="2.97e-05">
+<sequence>GGAGGGCA</sequence>
+<mem:qvalue>0.0255</mem:qvalue>
+</matched-element>
+<matched-element start="350" stop="357" score="11.9091" pvalue="5.38e-05">
+<sequence>GAAGGGCA</sequence>
+<mem:qvalue>0.0255</mem:qvalue>
+</matched-element>
+<matched-element start="455" stop="448" score="11.9091" pvalue="5.38e-05">
+<sequence>GAAGGGCA</sequence>
+<mem:qvalue>0.0255</mem:qvalue>
+</matched-element>
+<matched-element start="23" stop="16" score="11.7778" pvalue="6.59e-05">
+<sequence>ACAGGGCA</sequence>
+<mem:qvalue>0.0255</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1969.2" name="THRA">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="724" stop="741" score="8.02632" pvalue="5.4e-05">
+<sequence>GTCGCCTTTGCTCACCTC</sequence>
+<mem:qvalue>0.106</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1574.2" name="THRB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1575.2" name="THRB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="647" stop="631" score="10.9818" pvalue="2.27e-05">
+<sequence>TTTCCCTATGAAGGCCA</sequence>
+<mem:qvalue>0.0149</mem:qvalue>
+</matched-element>
+<matched-element start="225" stop="241" score="10.8727" pvalue="2.37e-05">
+<sequence>CTTCCTGGAGGAGGACA</sequence>
+<mem:qvalue>0.0149</mem:qvalue>
+</matched-element>
+<matched-element start="241" stop="225" score="10.3091" pvalue="2.96e-05">
+<sequence>TGTCCTCCTCCAGGAAG</sequence>
+<mem:qvalue>0.0149</mem:qvalue>
+</matched-element>
+<matched-element start="631" stop="647" score="10.2182" pvalue="3.06e-05">
+<sequence>TGGCCTTCATAGGGAAA</sequence>
+<mem:qvalue>0.0149</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1576.2" name="THRB">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1970.2" name="TRPS1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1123.3" name="TWIST1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0093.4" name="USF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="19" stop="10" score="11.5285" pvalue="4.4e-05">
+<sequence>GGCAGGTGAC</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0526.5" name="USF2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1578.2" name="VEZF1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0844.2" name="XBP1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1649.2" name="ZBTB12">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1650.2" name="ZBTB14">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0698.2" name="ZBTB18">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1579.2" name="ZBTB26">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0527.2" name="ZBTB33">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0750.3" name="ZBTB7A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="231" stop="223" score="10.6341" pvalue="9.03e-05">
+<sequence>CAGGAAGCC</sequence>
+<mem:qvalue>0.0939</mem:qvalue>
+</matched-element>
+<matched-element start="703" stop="695" score="10.561" pvalue="9.74e-05">
+<sequence>CCGGATGTG</sequence>
+<mem:qvalue>0.0939</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0694.2" name="ZBTB7B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="1007" stop="1016" score="12.5" pvalue="2.98e-05">
+<sequence>CAACCACCGG</sequence>
+<mem:qvalue>0.0585</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0695.2" name="ZBTB7C">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="1007" stop="1014" score="12.4194" pvalue="3.01e-05">
+<sequence>CAACCACC</sequence>
+<mem:qvalue>0.059</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0103.4" name="ZEB1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1585.2" name="ZKSCAN1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1973.2" name="ZKSCAN3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1652.2" name="ZKSCAN5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="158" stop="166" score="16.4587" pvalue="2.72e-06">
+<sequence>GGAGGTGAG</sequence>
+<mem:qvalue>0.00262</mem:qvalue>
+</matched-element>
+<matched-element start="742" stop="734" score="16.4587" pvalue="2.72e-06">
+<sequence>GGAGGTGAG</sequence>
+<mem:qvalue>0.00262</mem:qvalue>
+</matched-element>
+<matched-element start="755" stop="763" score="10.7706" pvalue="5.45e-05">
+<sequence>GGAAGGGAG</sequence>
+<mem:qvalue>0.035</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1589.2" name="ZNF140">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1653.2" name="ZNF148">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1654.2" name="ZNF16">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="881" stop="861" score="4.64516" pvalue="4.91e-05">
+<sequence>GTCAGGGAGGCATGGTTGATG</sequence>
+<mem:qvalue>0.0952</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1725.2" name="ZNF189">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1974.2" name="ZNF211">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1975.2" name="ZNF214">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1710.2" name="ZNF257">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="159" stop="168" score="11.9213" pvalue="4.76e-05">
+<sequence>GAGGTGAGGT</sequence>
+<mem:qvalue>0.0824</mem:qvalue>
+</matched-element>
+<matched-element start="977" stop="986" score="10.5955" pvalue="8.51e-05">
+<sequence>GAGGAAGGAT</sequence>
+<mem:qvalue>0.0824</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0528.3" name="ZNF263">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="703" stop="709" score="13.8273" pvalue="4.39e-05">
+<sequence>GGGAGGA</sequence>
+<mem:qvalue>0.0846</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1592.2" name="ZNF274">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1630.3" name="ZNF281">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="211" stop="220" score="8.94382" pvalue="4.27e-05">
+<sequence>GGAGGTTGGG</sequence>
+<mem:qvalue>0.0564</mem:qvalue>
+</matched-element>
+<matched-element start="976" stop="985" score="7.49438" pvalue="6.09e-05">
+<sequence>GGAGGAAGGA</sequence>
+<mem:qvalue>0.0564</mem:qvalue>
+</matched-element>
+<matched-element start="752" stop="761" score="6.91011" pvalue="8.98e-05">
+<sequence>GAGGGAAGGG</sequence>
+<mem:qvalue>0.0564</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1154.2" name="ZNF282">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1593.2" name="ZNF317">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="566" stop="559" score="10.9504" pvalue="5.87e-05">
+<sequence>ACTGCAGA</sequence>
+<mem:qvalue>0.0585</mem:qvalue>
+</matched-element>
+<matched-element start="75" stop="68" score="10.6099" pvalue="8.86e-05">
+<sequence>ACAACAGA</sequence>
+<mem:qvalue>0.0585</mem:qvalue>
+</matched-element>
+<matched-element start="265" stop="258" score="10.6099" pvalue="8.86e-05">
+<sequence>ACAACAGA</sequence>
+<mem:qvalue>0.0585</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1976.2" name="ZNF320">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="663" stop="682" score="11.4719" pvalue="1.53e-05">
+<sequence>GGAGGACAAGTGGACCTCGG</sequence>
+<mem:qvalue>0.0283</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1977.2" name="ZNF324">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="541" stop="528" score="10.2247" pvalue="5.6e-05">
+<sequence>TGGCAGGGCAGGTT</sequence>
+<mem:qvalue>0.11</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1726.2" name="ZNF331">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="564" stop="555" score="13.8257" pvalue="1.04e-05">
+<sequence>TGCAGAACCC</sequence>
+<mem:qvalue>0.0203</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1655.2" name="ZNF341">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1711.2" name="ZNF343">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1978.2" name="ZNF354A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1125.2" name="ZNF384">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="900" stop="907" score="13.5745" pvalue="3.23e-05">
+<sequence>AAAAAAAA</sequence>
+<mem:qvalue>0.0649</mem:qvalue>
+</matched-element>
+<matched-element start="901" stop="908" score="11.5532" pvalue="9.11e-05">
+<sequence>AAAAAAAT</sequence>
+<mem:qvalue>0.0916</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0752.2" name="ZNF410">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1979.2" name="ZNF416">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="55" stop="46" score="14.3571" pvalue="1.05e-05">
+<sequence>GATCTGGGCA</sequence>
+<mem:qvalue>0.0199</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1727.2" name="ZNF417">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1712.2" name="ZNF454">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1728.2" name="ZNF549">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="438" stop="431" score="12.7154" pvalue="1.8e-05">
+<sequence>GGCTGCCC</sequence>
+<mem:qvalue>0.0346</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1982.2" name="ZNF574">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1983.2" name="ZNF582">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1713.2" name="ZNF610">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1657.2" name="ZNF652">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1984.2" name="ZNF667">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="824" stop="814" score="10.461" pvalue="8.84e-05">
+<sequence>GTAAGATCCCA</sequence>
+<mem:qvalue>0.176</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1714.2" name="ZNF675">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1599.2" name="ZNF682">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1600.2" name="ZNF684">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1986.2" name="ZNF692">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1987.2" name="ZNF701">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="750" stop="734" score="11.6697" pvalue="2.13e-05">
+<sequence>GAGCAGTGGGAGGTGAG</sequence>
+<mem:qvalue>0.0392</mem:qvalue>
+</matched-element>
+<matched-element start="850" stop="834" score="9.36697" pvalue="6.43e-05">
+<sequence>CAGAATTCTAGGGGAAA</sequence>
+<mem:qvalue>0.0593</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1730.2" name="ZNF708">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0753.3" name="ZNF740">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="224" stop="215" score="9.61798" pvalue="7.29e-05">
+<sequence>CCTCCCCAAC</sequence>
+<mem:qvalue>0.091</mem:qvalue>
+</matched-element>
+<matched-element start="736" stop="745" score="9.01124" pvalue="9.71e-05">
+<sequence>CACCTCCCAC</sequence>
+<mem:qvalue>0.091</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1716.2" name="ZNF76">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1731.2" name="ZNF768">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1717.2" name="ZNF784">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1719.2" name="ZNF816">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="38" stop="52" score="18.8257" pvalue="2.71e-07">
+<sequence>TGGGGACATGCCCAG</sequence>
+<mem:qvalue>0.000511</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1720.2" name="ZNF85">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1602.2" name="ZSCAN29">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2122.1" name="Ebf4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2124.1" name="Hmga1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2339.1" name="Nanog">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="485" stop="479" score="12.669" pvalue="6.51e-05">
+<sequence>GCAATCA</sequence>
+<mem:qvalue>0.132</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0006.2" name="Ahr::Arnt">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0601.2" name="Arid3b">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0602.2" name="Arid5a">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0603.2" name="Arntl">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0874.2" name="Arx">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1988.2" name="Atf3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0591.2" name="Bach1::Mafk">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0489.3" name="Jun">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1989.2" name="Bcl11B">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0885.3" name="Dlx2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1476.3" name="Dlx5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0480.3" name="Foxo1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0643.2" name="Esrrg">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0851.2" name="Foxj3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0615.2" name="Gmeb1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0092.2" name="Hand1::Tcf3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0896.2" name="Hmx1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1991.2" name="Hnf1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1992.2" name="Ikzf3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="231" stop="223" score="11.4862" pvalue="4.96e-05">
+<sequence>CAGGAAGCC</sequence>
+<mem:qvalue>0.0972</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0768.3" name="Lef1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0117.3" name="Mafb">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0659.4" name="Mafg">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0622.2" name="Mlxip">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1993.2" name="Neurod2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0668.3" name="Neurod2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="239" stop="246" score="14.6881" pvalue="1.47e-05">
+<sequence>ACAGATGG</sequence>
+<mem:qvalue>0.0289</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0606.3" name="Nfat5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0150.3" name="Nfe2l2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0626.2" name="Npas2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1996.2" name="Nr1H2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0506.3" name="Nrf1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1997.2" name="Olig2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1615.2" name="Plagl1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="38" stop="45" score="10.8374" pvalue="7.64e-05">
+<sequence>TGGGGACA</sequence>
+<mem:qvalue>0.147</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0065.3" name="Pparg::Rxra">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="737" stop="725" score="10.4054" pvalue="9.47e-05">
+<sequence>TGAGCAAAGGCGA</sequence>
+<mem:qvalue>0.178</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1616.2" name="Prdm15">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="807" stop="817" score="11.4679" pvalue="4.31e-05">
+<sequence>GAGAACCTGGG</sequence>
+<mem:qvalue>0.0846</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1647.3" name="Prdm4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1618.2" name="Ptf1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="239" stop="247" score="11.878" pvalue="5.13e-05">
+<sequence>ACAGATGGG</sequence>
+<mem:qvalue>0.102</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1619.2" name="Ptf1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1620.2" name="Ptf1A">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="136" stop="129" score="11.2439" pvalue="9.22e-05">
+<sequence>TCACCTGT</sequence>
+<mem:qvalue>0.18</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1153.2" name="Smad4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0869.3" name="Sox11">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0078.3" name="Sox17">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="330" stop="321" score="14.8239" pvalue="3.36e-06">
+<sequence>GGAACAATGG</sequence>
+<mem:qvalue>0.00675</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0087.3" name="Sox5">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="328" stop="321" score="14.3816" pvalue="1.79e-05">
+<sequence>AACAATGG</sequence>
+<mem:qvalue>0.0362</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0080.7" name="Spi1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1623.2" name="Stat2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="75" stop="66" score="10.383" pvalue="9.43e-05">
+<sequence>ACAACAGAAA</sequence>
+<mem:qvalue>0.0938</mem:qvalue>
+</matched-element>
+<matched-element start="265" stop="256" score="10.383" pvalue="9.43e-05">
+<sequence>ACAACAGAAA</sequence>
+<mem:qvalue>0.0938</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0518.2" name="Stat4">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0519.2" name="Stat5a::Stat5b">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1625.2" name="Stat5b">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0520.2" name="Stat6">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="971" stop="962" score="14.2241" pvalue="1.32e-05">
+<sequence>TTCCTGTGAA</sequence>
+<mem:qvalue>0.0266</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0521.3" name="Tcf12">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0095.4" name="Yy1">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA2002.2" name="Zfp335">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0146.3" name="Zfx">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+<matched-element start="451" stop="442" score="12.4242" pvalue="4.07e-05">
+<sequence>GGCAAGGCCT</sequence>
+<mem:qvalue>0.0778</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1628.2" name="Zic1::Zic2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA1629.2" name="Zic2">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0697.3" name="Zic3">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0619.2" name="LIN54">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="MA0108.3" name="TBP">
+<scanned-sequence accession="6exFRMPD2macaquepromoter" name="6exFRMPD2macaquepromoter">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>
