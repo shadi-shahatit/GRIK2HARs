@@ -1,0 +1,7 @@
+##fileformat=VCFv4.1
+##contig=<ID=1,length=153>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	HARsv2_2519/1-153	chimp_liftover_HARsv2_2519/1-153	bonobo_liftover_HARsv2_2519/1-153
+6	103468161	.	C	T	.	.	.	GT	0	1	1
+6	103468162	.	C	A	.	.	.	GT	0	1	1
+6	103468165	.	G	C	.	.	.	GT	0	1	1
