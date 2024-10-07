@@ -1,0 +1,5 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov  7 2018 at 21:08:48
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo HAR_human_seq.fa JASPAR2024_CORE_vertebrates_non-redundant_pfms_meme.txt
