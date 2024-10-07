@@ -1,0 +1,6 @@
+Query_ID	Target_ID	Optimal_offset	p-value	E-value	q-value	Overlap	Query_consensus	Target_consensus	Orientation
+CAVATTMCTTTTGT	CAGMWWACTC	0	0.12648	0.12648	0.25296	10	CAAATTACTTTTGT	CAGAAAACTC	+
+
+# Tomtom (Motif Comparison Tool): Version 5.0.2 compiled on Nov  7 2018 at 21:08:58
+# The format of this file is described at http://meme-suite.org/doc/tomtom-output-format.html.
+# tomtom ./meme_out_chimp/meme.html ./meme_out/meme.html
