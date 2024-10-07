@@ -1,0 +1,26 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--out Munge_BD_Grove2019 \
+--N 41917.0 \
+--snp SNP \
+--sumstats BD_Mullins2021_edited_2.tsv \
+--no-alleles  
+
+
+ERROR converting summary statistics:
+
+Traceback (most recent call last):
+  File "ldsc/munge_sumstats.py", line 627, in munge_sumstats
+    raise ValueError('Could not find {C} column.'.format(C=c))
+ValueError: Could not find SNP column.
+
+
+Conversion finished at Tue Jun 25 17:52:48 2024
+Total time elapsed: 0.0s
