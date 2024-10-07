@@ -1,0 +1,43 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--h2 Munge_SCZ_trubetskoy2022.sumstats.gz \
+--out SCZ_HAR_baselineLD_chr6_changesscipt \
+--overlap-annot  \
+--frqfile /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_frq/1000G.EUR.QC.6 \
+--print-cov  \
+--w-ld /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.6 \
+--print-coefficients  \
+--print-delete-vals  \
+--ref-ld HAR_ldsc/HAR_3100.6 
+
+Beginning analysis at Fri Jun 21 19:25:02 2024
+Reading summary statistics from Munge_SCZ_trubetskoy2022.sumstats.gz ...
+Read summary statistics for 7585077 SNPs.
+Reading reference panel LD Score from HAR_ldsc/HAR_3100.6 ... (ldscore_fromlist)
+Read reference panel LD Scores for 75358 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.6 ... (ldscore_fromlist)
+Read regression weight LD Scores for 72386 SNPs.
+After merging with reference panel LD, 74081 SNPs remain.
+After merging with regression SNP LD, 71253 SNPs remain.
+WARNING: number of SNPs less than 200k; this is almost always bad.
+Using two-step estimator with cutoff at 30.
+Printing covariance matrix of the estimates to SCZ_HAR_baselineLD_chr6_changesscipt.cov.
+Printing block jackknife delete values to SCZ_HAR_baselineLD_chr6_changesscipt.delete.
+Printing partitioned block jackknife delete values to SCZ_HAR_baselineLD_chr6_changesscipt.part_delete.
+Total Observed scale h2: 0.0011 (0.0006)
+Lambda GC: 1.7295
+Mean Chi^2: 1.9938
+Intercept: 1.5948 (0.0454)
+Ratio: 0.5985 (0.0457)
+Reading annot matrix from HAR_ldsc/HAR_3100.6 ... (annot)
+Results printed to SCZ_HAR_baselineLD_chr6_changesscipt.results
+Analysis finished at Fri Jun 21 19:25:17 2024
+Total time elapsed: 15.4s

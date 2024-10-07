@@ -1,0 +1,43 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--h2 Munge_ASD_Grove2019.sumstats.gz \
+--out ASD_grik2_baselineLD_chr6_changesscipt \
+--overlap-annot  \
+--frqfile /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_frq/1000G.EUR.QC.6 \
+--print-cov  \
+--w-ld /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.6 \
+--print-coefficients  \
+--print-delete-vals  \
+--ref-ld HAR_ldsc_R/HAR_grik2_R.6 
+
+Beginning analysis at Thu Jun 20 19:42:18 2024
+Reading summary statistics from Munge_ASD_Grove2019.sumstats.gz ...
+Read summary statistics for 7304602 SNPs.
+Reading reference panel LD Score from HAR_ldsc_R/HAR_grik2_R.6 ... (ldscore_fromlist)
+Read reference panel LD Scores for 75358 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.6 ... (ldscore_fromlist)
+Read regression weight LD Scores for 72386 SNPs.
+After merging with reference panel LD, 67378 SNPs remain.
+After merging with regression SNP LD, 64652 SNPs remain.
+WARNING: number of SNPs less than 200k; this is almost always bad.
+Using two-step estimator with cutoff at 30.
+Printing covariance matrix of the estimates to ASD_grik2_baselineLD_chr6_changesscipt.cov.
+Printing block jackknife delete values to ASD_grik2_baselineLD_chr6_changesscipt.delete.
+Printing partitioned block jackknife delete values to ASD_grik2_baselineLD_chr6_changesscipt.part_delete.
+Total Observed scale h2: -5.7067e-05 (5.1965e-05)
+Lambda GC: 1.1523
+Mean Chi^2: 1.1375
+Intercept: 1.1111 (0.0246)
+Ratio: 0.8081 (0.1791)
+Reading annot matrix from HAR_ldsc_R/HAR_grik2_R.6 ... (annot)
+Results printed to ASD_grik2_baselineLD_chr6_changesscipt.results
+Analysis finished at Thu Jun 20 19:42:32 2024
+Total time elapsed: 13.9s

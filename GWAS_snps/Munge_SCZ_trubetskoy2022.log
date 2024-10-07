@@ -1,0 +1,43 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--out Munge_SCZ_trubetskoy2022 \
+--N 76755.0 \
+--snp ID \
+--sumstats SCZ_trubetskoy2022_edited.tsv \
+--no-alleles  
+
+Interpreting column names as follows:
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+PVAL:	p-Value
+BETA:	[linear/logistic] regression coefficient (0 --> no effect; above 0 --> A1 is trait/risk increasing)
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+ID:	Variant ID (e.g., rs number)
+
+Reading sumstats from SCZ_trubetskoy2022_edited.tsv into memory 5000000 SNPs at a time.
+Read 7585077 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+7585077 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (7585077 SNPs remain).
+Using N = 76755.0
+Median value of BETA was -0.00100050033358, which seems sensible.
+Writing summary statistics for 7585077 SNPs (7585077 with nonmissing beta) to Munge_SCZ_trubetskoy2022.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.99
+Lambda GC = 1.651
+Max chi^2 = 174.822
+23984 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Fri Jun 21 19:20:57 2024
+Total time elapsed: 1.0m:51.26s

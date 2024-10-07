@@ -1,0 +1,42 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--h2 Munge_BD_Mullins2021.sumstats.gz \
+--ref-ld-chr HAR_ldsc/HAR_3100. \
+--out BD_HAR_baselineLD \
+--overlap-annot  \
+--frqfile-chr /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_frq/1000G.EUR.QC. \
+--print-cov  \
+--w-ld-chr /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. \
+--print-coefficients  \
+--print-delete-vals  
+
+Beginning analysis at Tue Jun 25 18:56:12 2024
+Reading summary statistics from Munge_BD_Mullins2021.sumstats.gz ...
+Read summary statistics for 7608183 SNPs.
+Reading reference panel LD Score from HAR_ldsc/HAR_3100.[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1190321 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /home/shadi/Desktop/S4_Project/GWAS_snps/10515792/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1169780 SNPs remain.
+After merging with regression SNP LD, 1166960 SNPs remain.
+Using two-step estimator with cutoff at 30.
+Printing covariance matrix of the estimates to BD_HAR_baselineLD.cov.
+Printing block jackknife delete values to BD_HAR_baselineLD.delete.
+Printing partitioned block jackknife delete values to BD_HAR_baselineLD.part_delete.
+Total Observed scale h2: 0.0146 (0.0033)
+Lambda GC: 1.4459
+Mean Chi^2: 1.5877
+Intercept: 1.3376 (0.0101)
+Ratio: 0.5745 (0.0172)
+Reading annot matrix from HAR_ldsc/HAR_3100.[1-22] ... (annot)
+Results printed to BD_HAR_baselineLD.results
+Analysis finished at Tue Jun 25 18:56:39 2024
+Total time elapsed: 26.77s
